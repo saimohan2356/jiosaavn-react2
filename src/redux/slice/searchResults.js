@@ -2,7 +2,9 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 export default createSlice({
     name:"Search Results",
-    initialState:{},
+    initialState:{
+        value:"",
+    },
     reducers:{},
     extraReducers: builder => 
     builder.addCase(fetchSearch.pending, (state,action) =>{

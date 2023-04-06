@@ -30,7 +30,7 @@ const homePageSlice = createSlice({
 
 export const fetchHomepageData = createAsyncThunk("HomePage/fetch",async()=>{
     try {
-        const {data} = await axios.get("https://saavn.me/modules?language=english");
+        const {data} = await axios.get("https://saavn.me/modules?language=telugu");
         return data.data;
     } catch (error) {
         return error.message;

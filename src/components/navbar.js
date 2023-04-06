@@ -6,7 +6,7 @@ import styles from "../styles/navbar.module.scss";
 
 export default function Navbar() {
   const dispatch = useDispatch();
-  const searchRes = useSelector((state) => state.Search.value);
+  const searchRes = useSelector((state) => state.Search);
   const [show, setShow] = useState(false);
   const handleSearch = (event) => {
     setShow(true);
@@ -16,7 +16,7 @@ export default function Navbar() {
     }
   };
 
-  const searchKeys = Object.keys(searchRes.data);
+  const searchKeys = Object.keys(searchRes.value);
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
